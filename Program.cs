@@ -17,14 +17,35 @@ Skriv koden för programmet i C# */
 /* fråga användaren efter två tal
 metod som adderar dem och returnerar
 metod som printar resultatet */
+
+/* Övning 2
+Tänk dig ett program där användaren matar in ett ord. Ordet visas på skärmen och användaren får mata in ytterligare ett ord. Båda orden visas på skärmen osv. Detta fortsätter tills användaren matar in "sluta".
+
+Skriv pseudokod för programmet som kommentarer
+Skriv koden för programmet i C# */
+
+/* string input variabel `word` 
+print `word` i en LOOP */
 namespace P02;
 
 static class Program
 {
     public static void Main()
     {
-        int[] twoIntsFromUser = RequestFromUserTwoInts();
-        PrintTwoIntsFromUser(twoIntsFromUser);
+        bool twoInts = false;
+        bool printUserWordUntilStopWord = true;
+
+        if (twoInts)
+        {
+            int[] twoIntsFromUser = RequestFromUserTwoInts();
+            PrintTwoIntsFromUser(twoIntsFromUser);
+        }
+        if (printUserWordUntilStopWord)
+        {
+
+            PrintUserWordUntilStopWord();
+        }
+
     }
 
     public static int[] RequestFromUserTwoInts()
@@ -61,4 +82,25 @@ static class Program
         }
     }
 
+    public static void PrintUserWordUntilStopWord()
+    {
+        string word = "";
+        string stopWord = "sluta";
+
+
+        while (word != stopWord)
+        {
+            string? inputWord = Console.ReadLine();
+
+            if (inputWord != null && inputWord != stopWord)
+            {
+                word = inputWord;
+                Console.WriteLine($"Du skrev {inputWord}");
+            }
+            else if (inputWord == stopWord)
+            {
+                return;
+            }
+        }
+    }
 }
