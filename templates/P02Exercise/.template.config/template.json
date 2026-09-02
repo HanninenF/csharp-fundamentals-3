@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "identity": "Exercise",
+  "name": "Exercise",
+  "shortName": "exercise",
+  "sourceName": "ExerciseTemplate",
+  "classifications": ["C#", "Exercise"],
+  "preferNameDirectory": false
+}
