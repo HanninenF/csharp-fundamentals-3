@@ -45,14 +45,32 @@ LOOPA oändligt
    ANNARS
        SKRIV UT "Det där var inte ett giltigt tal!"
 SKRIV UT "Summan av talen är: " + SUMMA */
+using P02.Exercises;
 namespace P02;
 
-using P02.Exercises;
 
 static class Program
 {
     public static void Main()
     {
-        Exercise.Run();
+        var activeExercise = 3;
+        switch (activeExercise)
+        {
+            case 1:
+                Exercise.Run();
+                break;
+            case 2:
+                Exercise2.Run();
+                break;
+            case 3:
+                Exercise3.Run();
+                break;
+            default:
+                Console.WriteLine("Exercise does not exist");
+                break;
+        }
+
+
+
     }
 }
