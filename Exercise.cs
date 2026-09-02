@@ -5,9 +5,9 @@ public static class Exercise
     public static void Run()
     {
         bool twoInts = false;
-        bool printUserWordUntilStopWord = false;
+        bool printUserWordUntilStopWord = true;
         bool genomgång = false;
-        bool ex3 = true;
+        bool sumNumbersUntilStop = false;
 
         if (twoInts)
         {
@@ -30,50 +30,11 @@ public static class Exercise
 
         }
 
-        if (ex3)
+        if (sumNumbersUntilStop)
         {
-            /*  Övning 3
- Skriv programmet för denna pseudokod:
-
-
- SKAPA en variabel som heter SUMMA och sätt den till 0
- LOOPA oändligt
-
-     SKAPA en tom sträng som heter INPUT
-     LÄS in en rad från användaren och spara i INPUT
-     OM INPUT är lika med "sluta" (case insensitive)
-         AVBRYT loopen
-     ANNARS OM INPUT är tom
-         SKRIV UT "Du måste mata in något!"
-     ANNARS OM INPUT går att tolka som ett heltal
-         ADDERA heltalet till SUMMA
-     ANNARS
-         SKRIV UT "Det där var inte ett giltigt tal!"
- SKRIV UT "Summan av talen är: " + SUMMA */
-
-            int sum = 0;
-            string stopWord = "sluta";
-            while (sum == 0)
-            {
-                string? input = Console.ReadLine();
-
-
-                if (!string.IsNullOrWhiteSpace(input) && StringComparer.CurrentCultureIgnoreCase.Equals(input, stopWord))
-
-                {
-                    break;
-                }
-                else if (input == string.Empty)
-                {
-                    Console.Write("Du måste mata in något!");
-                }
-
-
-            }
-
+            SumNumbersUntilStop();
         }
     }
-
     public static int[] RequestFromUserTwoInts()
     {
         Console.WriteLine("Your task is two enter two ints. One at a time.\nPlease start with the first int:");
@@ -130,4 +91,35 @@ public static class Exercise
         }
     }
 
+    public static void SumNumbersUntilStop()
+    {
+        int sum = 0;
+        string stopWord = "sluta";
+        while (true)
+        {
+            string? input = Console.ReadLine();
+
+
+            if (!string.IsNullOrWhiteSpace(input) && StringComparer.CurrentCultureIgnoreCase.Equals(input, stopWord))
+
+            {
+                break;
+            }
+            else if (input == string.Empty)
+            {
+                Console.WriteLine("Du måste mata in något!");
+
+            }
+            else if (int.TryParse(input, out int number))
+            {
+                sum += number;
+            }
+            else
+            {
+                Console.WriteLine("Det där var inte ett giltigt tal!");
+            }
+
+        }
+        Console.WriteLine($"Summan av talen är: {sum}");
+    }
 }

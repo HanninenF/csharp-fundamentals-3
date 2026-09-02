@@ -26,6 +26,25 @@ Skriv koden för programmet i C# */
 
 /* string input variabel `word` 
 print `word` i en LOOP */
+
+/*  Övning 3
+Skriv programmet för denna pseudokod:
+
+
+SKAPA en variabel som heter SUMMA och sätt den till 0
+LOOPA oändligt
+
+   SKAPA en tom sträng som heter INPUT
+   LÄS in en rad från användaren och spara i INPUT
+   OM INPUT är lika med "sluta" (case insensitive)
+       AVBRYT loopen
+   ANNARS OM INPUT är tom
+       SKRIV UT "Du måste mata in något!"
+   ANNARS OM INPUT går att tolka som ett heltal
+       ADDERA heltalet till SUMMA
+   ANNARS
+       SKRIV UT "Det där var inte ett giltigt tal!"
+SKRIV UT "Summan av talen är: " + SUMMA */
 namespace P02;
 
 static class Program
