@@ -47,6 +47,8 @@ LOOPA oändligt
 SKRIV UT "Summan av talen är: " + SUMMA */
 namespace P02;
 
+using P02.Exercises;
+
 static class Program
 {
     public static void Main()

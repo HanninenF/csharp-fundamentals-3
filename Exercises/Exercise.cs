@@ -1,4 +1,4 @@
-namespace P02;
+namespace P02.Exercises;
 
 public static class Exercise
 {
