@@ -53,7 +53,7 @@ static class Program
 {
     public static void Main()
     {
-        var activeExercise = 3;
+        var activeExercise = 4;
         switch (activeExercise)
         {
             case 1:
@@ -63,14 +63,14 @@ static class Program
                 Exercise2.Run();
                 break;
             case 3:
-                Exercise3.Run();
+                PrintTwoDimensionalArray.Run();
+                break;
+            case 4:
+                Exercise4.Run();
                 break;
             default:
                 Console.WriteLine("Exercise does not exist");
                 break;
         }
-
-
-
     }
 }
