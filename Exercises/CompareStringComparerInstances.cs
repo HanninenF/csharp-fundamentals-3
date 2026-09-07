@@ -1,14 +1,14 @@
 namespace P02.Exercises;
 
-public static class Exercise2
+public static class CompareStringComparerInstances
 {
     public static void Run()
     {
-        CompareCurrentCultureInsensitiveStringComparer();
+        CompareStringComparerReferences();
 
 
     }
-    private static void CompareCurrentCultureInsensitiveStringComparer()
+    private static void CompareStringComparerReferences()
     {
         StringComparer stringComparer1, stringComparer2;
         stringComparer1 = StringComparer.CurrentCultureIgnoreCase;

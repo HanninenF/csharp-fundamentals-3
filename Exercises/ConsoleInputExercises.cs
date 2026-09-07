@@ -1,6 +1,6 @@
 namespace P02.Exercises;
 
-public static class Exercise
+public static class ConsoleInputExercises
 {
     public static void Run()
     {

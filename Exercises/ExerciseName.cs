@@ -2,8 +2,8 @@ namespace P02.Exercises;
 
 public enum ExerciseName
 {
-    Exercise1,
-    Exercise2,
+    ConsoleInputExercises,
+    CompareStringComparerInstances,
     PrintTwoDimensionalArray,
-    Exercise4
+    WorkWithOneDimensionalArrays
 }

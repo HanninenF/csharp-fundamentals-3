@@ -8,7 +8,7 @@ Låt användaren mata in tre namn, lagra dem i en array och skriv sedan ut dem s
 Person 1: [namn]
 Person 2: [namn]
 Person 3: [namn] */
-public static class Exercise4
+public static class WorkWithOneDimensionalArrays
 {
     public static void Run()
     {
