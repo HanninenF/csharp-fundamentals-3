@@ -53,6 +53,6 @@ static class Program
 {
     public static void Main()
     {
-        ExerciseRunner.Run(ExerciseName.ConsoleInputExercises);
+        ExerciseRunner.Run(ExerciseName.WorkWithOneDimensionalArrays);
     }
 }
