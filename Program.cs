@@ -53,24 +53,6 @@ static class Program
 {
     public static void Main()
     {
-        var activeExercise = 4;
-        switch (activeExercise)
-        {
-            case 1:
-                Exercise.Run();
-                break;
-            case 2:
-                Exercise2.Run();
-                break;
-            case 3:
-                PrintTwoDimensionalArray.Run();
-                break;
-            case 4:
-                Exercise4.Run();
-                break;
-            default:
-                Console.WriteLine("Exercise does not exist");
-                break;
-        }
+        ExerciseRunner.Run(ExerciseName.PrintTwoDimensionalArray);
     }
 }
