@@ -5,5 +5,8 @@ public enum ExerciseName
     ConsoleInputExercises,
     CompareStringComparerInstances,
     PrintTwoDimensionalArray,
-    WorkWithOneDimensionalArrays
+    WorkWithOneDimensionalArrays,
+    Exercise5,
+    Exercise6,
+    Exercise7
 }
