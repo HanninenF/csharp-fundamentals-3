@@ -12,7 +12,6 @@ public static class WorkWithOneDimensionalArrays
 {
     public static void Run()
     {
-        string[] names = ["Janne", "Gustav", "Timmy", "Simona"];
         bool requestNamesAndAgesAndPrint = true;
         if (requestNamesAndAgesAndPrint) RequestNamesAndAgesAndPrint();
     }
@@ -21,32 +20,40 @@ public static class WorkWithOneDimensionalArrays
     {
         public List<string> Names { get; } = [];
         public List<string> Ages { get; } = [];
-
     }
     public static void RequestNamesAndAgesAndPrint()
     {
         UserInput userInput = new();
         List<int> parsedAges = [];
         int counter = 3;
-        List<string> userPrompts = ["Please enter a name:", "Please enter an age for "];
-
 
         for (int i = 0; i < counter; i++)
         {
-            Console.WriteLine(userPrompts[0]);
-            userInput.Names.Add(Console.ReadLine() ?? "");
-            Console.Write(userPrompts[1]);
-            Console.WriteLine(userInput.Names[i]);
-            userInput.Ages.Add(Console.ReadLine() ?? "");
-
-            parsedAges.Add(int.Parse(userInput.Ages[i]));
-
-
+            parsedAges.Add(UserPrompt(i, userInput));
         }
 
+        PrintResult(parsedAges);
+    }
+
+    public static void PrintResult(List<int> parsedAges)
+    {
         foreach (int age in parsedAges)
         {
             Console.WriteLine(age);
         }
+    }
+
+    private static int UserPrompt(int i, UserInput userInput)
+    {
+
+        List<string> userPrompts = ["Please enter a name:", "Please enter an age for "];
+
+        Console.WriteLine(userPrompts[0]);
+        userInput.Names.Add(Console.ReadLine() ?? "");
+        Console.WriteLine(userPrompts[1] + userInput.Names[i]);
+        userInput.Ages.Add(Console.ReadLine() ?? "");
+
+        return int.Parse(userInput.Ages[i]);
+
     }
 }
