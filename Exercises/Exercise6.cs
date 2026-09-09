@@ -10,6 +10,7 @@ Skriver ut en sträng i stil med $"Hej {name}, hur mår du idag?" i konsolen. */
 
 
 
+
 public static class Exercise6
 {
     public static void Run()
