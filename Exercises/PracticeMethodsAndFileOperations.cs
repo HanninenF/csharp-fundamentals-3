@@ -16,31 +16,30 @@ Du kanske måste ta reda på hur färgen kan ändras i konsolen!
 
 Gör sedan ett program som först skriver ut "Detta är ett vanligt meddelande", sedan anropar WriteWarning med meddelandet "Detta är ett varningsmeddelande" och slutligen skriver ut "Detta är ett annat vanligt meddelande". */
 
-enum Exercise
+enum PracticeTask
 {
     CalculateTax,
     WriteWarning,
-    GetIntFromUserMax,
-    GetIntFromUser,
-    Genomgång,
-    Genomgång2,
-    Genomgång3,
-    Genomgång4,
-    File,
-    File2
-
+    ReadIntegerUntilValid,
+    ReadIntegerWithPrompt,
+    GenerateFortuneMessages,
+    SearchForWordInFile,
+    DoubleValue,
+    CensorNames,
+    FileOperations,
+    AdditionalFileOperations
 }
 
-public static class Exercise7
+public static class PracticeMethodsAndFileOperations
 {
     public static void Run()
     {
-        Exercise exercise = Exercise.File;
+        PracticeTask exercise = PracticeTask.FileOperations;
 
 
         switch (exercise)
         {
-            case Exercise.CalculateTax:
+            case PracticeTask.CalculateTax:
                 Console.WriteLine("Please enter your income:");
                 string? incomeFromUser = Console.ReadLine();
 
@@ -52,7 +51,7 @@ public static class Exercise7
                 }
                 break;
 
-            case Exercise.WriteWarning:
+            case PracticeTask.WriteWarning:
                 string message = "Detta är ett vanligt meddelande";
                 string warning = "Detta är ett varningsmeddelande";
                 string anotherNormalMessage = "Detta är ett annat vanligt meddelande";
@@ -62,7 +61,7 @@ public static class Exercise7
                 WriteMessage(anotherNormalMessage);
                 break;
 
-            case Exercise.GetIntFromUserMax:
+            case PracticeTask.ReadIntegerUntilValid:
 
 
                 while (true)
@@ -99,7 +98,7 @@ public static class Exercise7
 
                 break;
 
-            case Exercise.GetIntFromUser:
+            case PracticeTask.ReadIntegerWithPrompt:
                 /*             1. Parsningsmetod
                 Skriv en metod som heter GetIntFromUser som:
 
@@ -113,7 +112,7 @@ public static class Exercise7
                 Console.WriteLine($"Du matade in:    {GetIntFromUser(userPrompt)}");
                 break;
 
-            case Exercise.Genomgång:
+            case PracticeTask.GenerateFortuneMessages:
                 //Ha en array med 5-10 olika meddelanden
                 List<string> fortuneCookieMessages = ["Du får tur idag", "köp en hund", "Hej", "kass", "Du måste köpa mjölk"];
 
@@ -129,7 +128,7 @@ public static class Exercise7
                 }
                 break;
 
-            case Exercise.Genomgång2:
+            case PracticeTask.SearchForWordInFile:
                 //Läs in en textfil
 
                 string[] lines = File.ReadAllLines("");
@@ -160,7 +159,7 @@ public static class Exercise7
 
                 break;
 
-            case Exercise.Genomgång3:
+            case PracticeTask.DoubleValue:
 
                 int age = 10;
                 DoubleNumber(age);
@@ -169,7 +168,7 @@ public static class Exercise7
 
                 break;
 
-            case Exercise.Genomgång4:
+            case PracticeTask.CensorNames:
 
                 List<string> importedNames = ["gun", "bob", "kim"];
 
@@ -183,7 +182,7 @@ public static class Exercise7
 
                 break;
 
-            case Exercise.File:
+            case PracticeTask.FileOperations:
                 string filePath = "exempel.txt";
 
                 File.WriteAllText(filePath, "Detta är en exempeltext.");
@@ -208,10 +207,26 @@ public static class Exercise7
                 bool fileExists = File.Exists(destinationPath); // Kolla om filen finns
                 Console.WriteLine($"Filen finns: {fileExists}");
 
-                File.Delete(destinationPath); // Ta bort filen
+
+                if (File.Exists(destinationPath))
+                {
+                    string[] readAllDestinationPathRows = File.ReadAllLines(destinationPath);
+                    foreach (string row in readAllDestinationPathRows)
+                    {
+                        Console.WriteLine($"Copy: {row}");
+                    }
+                    File.Delete(destinationPath); // Ta bort filen 
+                }
+                else
+                {
+                    Console.WriteLine("Filen finns inte.");
+                }
+
+
 
                 break;
-            case Exercise.File2:
+
+            case PracticeTask.AdditionalFileOperations:
 
                 break;
             default: return;

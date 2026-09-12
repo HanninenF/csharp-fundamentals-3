@@ -6,7 +6,7 @@ public enum ExerciseName
     CompareStringComparerInstances,
     PrintTwoDimensionalArray,
     WorkWithOneDimensionalArrays,
-    Exercise5,
-    Exercise6,
-    Exercise7
+    WorkWithNamesAndAges,
+    PrintGreetingMessages,
+    PracticeMethodsAndFileOperations
 }

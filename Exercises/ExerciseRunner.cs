@@ -8,9 +8,9 @@ public static class ExerciseRunner
         { ExerciseName.CompareStringComparerInstances, CompareStringComparerInstances.Run },
         { ExerciseName.PrintTwoDimensionalArray, PrintTwoDimensionalArray.Run },
         { ExerciseName.WorkWithOneDimensionalArrays, WorkWithOneDimensionalArrays.Run },
-        { ExerciseName.Exercise5,Exercise5.Run },
-        { ExerciseName.Exercise6,Exercise6.Run },
-        { ExerciseName.Exercise7, Exercise7.Run }
+        { ExerciseName.WorkWithNamesAndAges, WorkWithNamesAndAges.Run },
+        { ExerciseName.PrintGreetingMessages, PrintGreetingMessages.Run },
+        { ExerciseName.PracticeMethodsAndFileOperations, PracticeMethodsAndFileOperations.Run }
     };
 
     public static void Run(ExerciseName exercise)

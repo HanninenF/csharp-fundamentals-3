@@ -53,6 +53,6 @@ static class Program
 {
     public static void Main()
     {
-        ExerciseRunner.Run(ExerciseName.Exercise7);
+        ExerciseRunner.Run(ExerciseName.PracticeMethodsAndFileOperations);
     }
 }
